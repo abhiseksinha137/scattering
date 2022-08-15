@@ -39,9 +39,10 @@ for j=1:length(xfList)
     P=P+abs(W).^2;
     P(isinf(P))=0;
 end
-plot(E*eV, P0/max(P0), 'r', 'Linewidth', 2); hold on;
-plot(E*eV,P/max(P), 'k','Linewidth', 2)
+plot(E/eV, P0/max(P0), 'r', 'Linewidth', 2); hold on;
+plot(E/eV,P/max(P), 'k','Linewidth', 2)
 legend('Spectrum without Scattering', 'Spectrum with Scattering')
-exportgraphics(gcf, 'Spectrum.png', Resolution=400);
 xlabel('Energy eV')
+exportgraphics(gcf, 'Spectrum.png', Resolution=400);
+
 
